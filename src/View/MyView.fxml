@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<?import View.MazeDisplayer?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.text.Text?>
+<BorderPane fx:id="MainPane" stylesheets="@MyViewCSS.css" onMouseClicked="#mouseClicked" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MyViewController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem id="newButton" mnemonicParsing="false" onAction="#newOnAction" text="New" />
+                  <MenuItem id="saveButton" onAction="#saveOnAction" mnemonicParsing="false" text="Save" />
+                  <MenuItem id="loadButton" onAction="#loadOnAction" mnemonicParsing="false" text="Load" />
+            </items>
+          </Menu>
+
+          <Menu mnemonicParsing="false" text="Options">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#propertiesOnAction" text="Properties" />
+            </items>
+          </Menu>
+
+            <Menu mnemonicParsing="false" text="Help">
+                <items>
+                    <MenuItem mnemonicParsing="false" text="Instructions" onAction="#instructionsOnAction" />
+                    <MenuItem mnemonicParsing="false" text="Game Rules" onAction="#gameRulesOnAction" />
+                </items>
+            </Menu>
+
+            <Menu mnemonicParsing="false" text="Exit">
+                <items>
+                    <MenuItem mnemonicParsing="false" text="Are you Sure?" onAction="#exitOnAction" />
+                </items>
+            </Menu>
+
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+       <Pane BorderPane.alignment="CENTER">
+           <children>
+               <Label fx:id="mainText" text="Text" />
+
+               <MazeDisplayer fx:id="mazeDisplayer"
+                              height="400.0"
+                              imageFileNamePlayerUp="./resources/images/playerup.png"
+                              imageFileNamePlayerDown="./resources/images/playerdown.png"
+                              imageFileNamePlayerRight="./resources/images/playerright.png"
+                              imageFileNamePlayerLeft="./resources/images/playerleft.png"
+                              imageFileNameWall1="./resources/images/planet.png"
+                              imageFileNameWall2="./resources/images/planet2.png"
+                              imageFileNameSolution="./resources/images/star.png"
+                              width="400.0"
+                              onKeyPressed="#keyPressed"
+                              onScroll="#mouseScrolled"
+               />
+           </children>
+           <padding>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+           </padding>
+       </Pane>
+   </center>
+</BorderPane>

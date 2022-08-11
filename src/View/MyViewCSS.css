@@ -1,0 +1,12 @@
+.root{
+    -fx-background-image: url('../Images/space.jpg');
+    -fx-background-size: cover;
+    -fx-background-color:transparent
+}
+
+
+#mainText{
+    -fx-font-size: 81px;
+    -fx-padding: 0.333333em 0.583em 0.333333em 0.583em;
+    -fx-text-fill: lightgray;
+}
