@@ -1,7 +1,7 @@
 # Maze Project
 
 This project, created as a university coursework, was an engaging learning experience. It allowed me to delve into various concepts including Design Patterns, SOLID principles, threads, and architectures using Java.
-
+![mazegame](images/mazegame.png "mazegameg")<br>
 ## Project Breakdown
 
 The project is primarily divided into three main parts:
